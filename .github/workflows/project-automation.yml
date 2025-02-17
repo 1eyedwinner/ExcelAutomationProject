@@ -8,8 +8,11 @@ jobs:
   add_to_project:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Add issue to Project Board
         uses: actions/add-to-project@v0.5.0
         with:
-          project-url: 'https://github.com/users/1eyedwinner/projects/2'
+          project-url: 'https://github.com/users/1eyedwinner/projects/2'  # Update with your project URL
           github-token: ${{ secrets.MY_GITHUB_TOKEN }}
