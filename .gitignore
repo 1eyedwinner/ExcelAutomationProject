@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+venv/
+.env
+*.env
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs and Databases
+*.log
+*.sqlite3
+
+# MacOS Files
+.DS_Store
+
+# VSCode Settings
+.vscode/
+
+# Excel Files
+*.xlsx
+*.xlsm
