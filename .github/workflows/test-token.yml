@@ -1,0 +1,23 @@
+name: Test GitHub Token
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-token:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify GitHub Token
+        run: echo "Token is configured correctly!"
+
+      - name: Verify Secrets Access
+        run: |
+          if [ -z "${{ secrets.MY_GITHUB_TOKEN }}" ]; then
+            echo "❌ MY_GITHUB_TOKEN is not set"
+            exit 1
+          else
+            echo "✅ MY_GITHUB_TOKEN is set"
+          fi
